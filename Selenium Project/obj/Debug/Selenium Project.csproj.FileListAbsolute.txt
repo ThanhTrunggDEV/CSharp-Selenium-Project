@@ -1,0 +1,40 @@
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\Selenium Project.exe.config
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\Selenium Project.exe
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\Selenium Project.pdb
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\Selenium Project.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\MainWindow.g.cs
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\App.g.cs
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\Selenium Project_MarkupCompile.cache
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\Selenium Project_MarkupCompile.lref
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\MainWindow.baml
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\Selenium Project.g.resources
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\Selenium_Project.Properties.Resources.resources
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\Selenium Project.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\Selenium Project.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\Selenium Project.exe
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\Selenium Project.pdb
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\selenium-manager\linux\selenium-manager
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\selenium-manager\macos\selenium-manager
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\selenium-manager\windows\selenium-manager.exe
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Buffers.dll
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Memory.dll
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Text.Json.dll
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.ValueTuple.dll
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\WebDriver.dll
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Buffers.xml
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Memory.xml
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Text.Json.xml
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.ValueTuple.xml
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\WebDriver.xml
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\Selenium Project_Content.g.cs
+C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\Selenium.898AF479.Up2Date
