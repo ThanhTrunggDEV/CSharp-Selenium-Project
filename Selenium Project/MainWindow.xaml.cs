@@ -32,17 +32,17 @@ namespace Selenium_Project
             InitializeComponent();
         }
 
-        private void BuyAndConfirm(ref FirefoxDriver firefoxDriver)
+        private void BuyAndConfirm(ref FirefoxDriver firefoxDriver)  // Buy and Confirm Action
         {
-            var scrollDown = (IJavaScriptExecutor)firefoxDriver;
-            scrollDown.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
+            var scrollDown = (IJavaScriptExecutor)firefoxDriver;                     
+            scrollDown.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");   // Scroll down to the bottom aimed to see buy button
             var buyButton = firefoxDriver.FindElement(By.XPath("//button[contains(@class, 'btn btn-primary') and normalize-space(text())='Mua dịch vụ']"));
-            Thread.Sleep(500);
+            Thread.Sleep(500);                                                             // wait until everything is oke then click
             buyButton.Click();
             var confirmButton = firefoxDriver.FindElement(By.XPath("//button[contains(@class, 'swal2-confirm btn btn-success') and normalize-space(text())='Mua hàng']"));
             confirmButton.Click();
         }
-        private void Login(ref FirefoxDriver firefoxDriver)
+        private void Login(ref FirefoxDriver firefoxDriver)   // Login action
         {
             firefoxDriver.Url = "https://dichvu.baostar.pro/dang-nhap";
             firefoxDriver.Navigate();
