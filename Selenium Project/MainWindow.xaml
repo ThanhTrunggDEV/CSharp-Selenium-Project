@@ -9,19 +9,16 @@
         Title="Written And Designed By ThanhTrung" Height="450" Width="800">
     <Grid x:Name="Window" Margin="-12,0,0,0">
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black"/>
-                <GradientStop Color="#FFB74141" Offset="1"/>
-            </LinearGradientBrush>
+            <ImageBrush ImageSource="/hinh-nen-may-tinh-dep-nhat-202302 (1).jpg"/>
         </Grid.Background>
-        <TextBox x:Name="textBoxLink" HorizontalAlignment="Left" Margin="53,274,0,0" TextWrapping="Wrap" Text="Enter Link Status" VerticalAlignment="Top" Width="422"/>
-        <TextBox x:Name="textBoxQuantity" HorizontalAlignment="Left" Margin="53,251,0,0" TextWrapping="Wrap" Text="Enter Quantity" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="textBoxLink" HorizontalAlignment="Left" Margin="314,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422"/>
+        <TextBox x:Name="textBoxQuantity" HorizontalAlignment="Left" Margin="314,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <RadioButton x:Name="likeFaceBook" Content="Like FaceBook" HorizontalAlignment="Left" Margin="314,165,0,0" VerticalAlignment="Top" Checked="likeFaceBook_Checked"/>
         <RadioButton x:Name="followFacebook" Content="Follow FaceBook" HorizontalAlignment="Left" Margin="314,185,0,0" VerticalAlignment="Top" Checked="followFacebook_Checked"/>
-        <RadioButton x:Name="tymTikTok" Content="Tym TikTok" HorizontalAlignment="Left" Margin="314,205,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="followTiktok" Content="Follow TikTok" HorizontalAlignment="Left" Margin="314,225,0,0" VerticalAlignment="Top" ClickMode="Press" IsChecked="False"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="93,180,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="1.886,6.966"/>
-        <ComboBox x:Name="listServices" HorizontalAlignment="Left" Margin="314,244,0,0" VerticalAlignment="Top" Width="253" IsEnabled="False">
+        <RadioButton x:Name="tymTikTok" Content="Tym TikTok" HorizontalAlignment="Left" Margin="314,205,0,0" VerticalAlignment="Top" Checked="tymTikTok_Checked"/>
+        <RadioButton x:Name="followTiktok" Content="Follow TikTok" HorizontalAlignment="Left" Margin="314,225,0,0" VerticalAlignment="Top" ClickMode="Press" IsChecked="False" Checked="followTiktok_Checked"/>
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="440,249,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="1.886,6.966" IsEnabled="False"/>
+        <ComboBox x:Name="listServices" HorizontalAlignment="Left" Margin="314,303,0,0" VerticalAlignment="Top" Width="253" IsEnabled="False" SelectionChanged="listServices_SelectionChanged">
             <ComboBoxItem Uid="0" Content=""/>
             <ComboBoxItem Uid="1"/>
             <ComboBoxItem Uid="2"/>
@@ -34,6 +31,10 @@
             <ComboBoxItem Content="" Uid="9"/>
 
         </ComboBox>
+        <RadioButton x:Name="viewTikTok" Content="View TikTok" HorizontalAlignment="Left" Margin="314,145,0,0" VerticalAlignment="Top" Checked="viewTikTok_Checked"/>
+        <Label Content="Quantity" HorizontalAlignment="Left" Margin="253,246,0,0" VerticalAlignment="Top" Background="#FFF7F7F7"/>
+        <Label Content="Link" HorizontalAlignment="Left" Margin="277,270,0,0" VerticalAlignment="Top" Background="#FFE6E6E6"/>
+        <Label Content="Services" HorizontalAlignment="Left" Margin="262,301,0,0" VerticalAlignment="Top" Background="#FFE6D9D9"/>
     </Grid>
 
 </Window>

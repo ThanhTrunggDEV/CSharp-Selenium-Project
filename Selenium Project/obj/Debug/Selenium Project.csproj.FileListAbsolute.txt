@@ -38,3 +38,43 @@ C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\System.V
 C:\Users\admin\source\repos\Selenium Project\Selenium Project\bin\Debug\WebDriver.xml
 C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\Selenium Project_Content.g.cs
 C:\Users\admin\source\repos\Selenium Project\Selenium Project\obj\Debug\Selenium.898AF479.Up2Date
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\selenium-manager\linux\selenium-manager
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\selenium-manager\macos\selenium-manager
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\selenium-manager\windows\selenium-manager.exe
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\Selenium Project.exe.config
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\Selenium Project.exe
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\Selenium Project.pdb
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Buffers.dll
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Memory.dll
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Numerics.Vectors.dll
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Text.Encodings.Web.dll
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Text.Json.dll
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.ValueTuple.dll
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\WebDriver.dll
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Buffers.xml
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Memory.xml
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Numerics.Vectors.xml
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Text.Encodings.Web.xml
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Text.Json.xml
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\System.ValueTuple.xml
+D:\Coding Space\C#\Selenium Project\Selenium Project\bin\Debug\WebDriver.xml
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\Selenium Project.csproj.AssemblyReference.cache
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\MainWindow.g.cs
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\App.g.cs
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\Selenium Project_Content.g.cs
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\Selenium Project_MarkupCompile.cache
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\Selenium Project_MarkupCompile.lref
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\MainWindow.baml
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\Selenium Project.g.resources
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\Selenium_Project.Properties.Resources.resources
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\Selenium Project.csproj.GenerateResource.cache
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\Selenium Project.csproj.CoreCompileInputs.cache
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\Selenium.898AF479.Up2Date
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\Selenium Project.exe
+D:\Coding Space\C#\Selenium Project\Selenium Project\obj\Debug\Selenium Project.pdb
