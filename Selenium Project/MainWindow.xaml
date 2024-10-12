@@ -11,7 +11,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/hinh-nen-may-tinh-dep-nhat-202302 (1).jpg"/>
         </Grid.Background>
-        <TextBox x:Name="textBoxLink" HorizontalAlignment="Left" Margin="314,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422"/>
+        <TextBox x:Name="textBoxLink" HorizontalAlignment="Left" Margin="305,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422"/>
         <TextBox x:Name="textBoxQuantity" HorizontalAlignment="Left" Margin="314,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <RadioButton x:Name="likeFaceBook" Content="Like FaceBook" HorizontalAlignment="Left" Margin="314,165,0,0" VerticalAlignment="Top" Checked="likeFaceBook_Checked"/>
         <RadioButton x:Name="followFacebook" Content="Follow FaceBook" HorizontalAlignment="Left" Margin="314,185,0,0" VerticalAlignment="Top" Checked="followFacebook_Checked"/>
@@ -33,8 +33,18 @@
         </ComboBox>
         <RadioButton x:Name="viewTikTok" Content="View TikTok" HorizontalAlignment="Left" Margin="314,145,0,0" VerticalAlignment="Top" Checked="viewTikTok_Checked"/>
         <Label Content="Quantity" HorizontalAlignment="Left" Margin="253,246,0,0" VerticalAlignment="Top" Background="#FFF7F7F7"/>
-        <Label Content="Link" HorizontalAlignment="Left" Margin="277,270,0,0" VerticalAlignment="Top" Background="#FFE6E6E6"/>
-        <Label Content="Services" HorizontalAlignment="Left" Margin="262,301,0,0" VerticalAlignment="Top" Background="#FFE6D9D9"/>
+        <Label Content="Link" HorizontalAlignment="Left" Margin="268,274,0,0" VerticalAlignment="Top" Background="#FFE6E6E6" Height="25" Width="32" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Services" HorizontalAlignment="Left" Margin="258,301,0,0" VerticalAlignment="Top" Background="#FFE6D9D9"/>
+        <RadioButton x:Name="likePageFaceBook" Content="Like Page Face Book" HorizontalAlignment="Left" Margin="314,125,0,0" VerticalAlignment="Top" ClickMode="Press" IsChecked="False" Checked="likePageFaceBook_Checked"/>
     </Grid>
 
 </Window>

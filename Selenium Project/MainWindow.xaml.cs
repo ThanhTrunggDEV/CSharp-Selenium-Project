@@ -34,6 +34,7 @@ namespace Selenium_Project
 
         private void BuyAndConfirm(ref FirefoxDriver firefoxDriver)  // Buy and Confirm Action
         {
+            flag:
             var scrollDown = (IJavaScriptExecutor)firefoxDriver;                     
             scrollDown.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");   // Scroll down to the bottom aimed to see buy button
             var buyButton = firefoxDriver.FindElement(By.XPath("//button[contains(@class, 'btn btn-primary') and normalize-space(text())='Mua dịch vụ']"));
@@ -41,6 +42,26 @@ namespace Selenium_Project
             buyButton.Click();
             var confirmButton = firefoxDriver.FindElement(By.XPath("//button[contains(@class, 'swal2-confirm btn btn-success') and normalize-space(text())='Mua hàng']"));
             confirmButton.Click();
+            try
+            {
+                Thread.Sleep(2000);
+                var okButton = firefoxDriver.FindElement(By.ClassName("swal2-confirm"));
+                okButton.Click();
+                goto flag;
+            }
+            catch
+            {
+                try
+                {
+                    var okButton = firefoxDriver.FindElement(By.ClassName("swal2-confirm"));
+                    okButton.Click();
+                }
+                catch
+                {
+                    goto flag;
+                }
+                goto flag;
+            }
         }
         private void Login(ref FirefoxDriver firefoxDriver)   // Login action
         {
@@ -65,30 +86,7 @@ namespace Selenium_Project
             var quantityLike = firefoxDriver.FindElement(By.Name("quantity"));
             quantityLike.Clear();
             quantityLike.SendKeys(quantity.ToString());
-        }
-        private void RepeatBuy(ref FirefoxDriver firefoxDriver)
-        {
-            while (true)
-            {
-                try
-                {
-                    Thread.Sleep(1000);
-                    string errorTitle = (string)((IJavaScriptExecutor)firefoxDriver).ExecuteScript("return document.querySelector('.mt-4.pt-2.fs-base h4').innerText;");
-                    if (errorTitle == "Thành Công")
-                    {
-                        MessageBox.Show("Successfully");
-                        break;
-                    }
-                }
-                catch
-                {
-                    Thread.Sleep(2000);
-                    var okButton = firefoxDriver.FindElement(By.ClassName("swal2-confirm"));
-                    okButton.Click();
-                    BuyAndConfirm(ref firefoxDriver);
-                }
-
-            }
+            Thread.Sleep(2000);
         }
         private void LikeFaceBook(ref FirefoxDriver firefoxDriver, string quantity, string link, string option)
         {
@@ -105,7 +103,6 @@ namespace Selenium_Project
             }
             catch { }
             BuyAndConfirm(ref firefoxDriver);
-            RepeatBuy(ref firefoxDriver);
         }
         private void FollowFaceBook(ref FirefoxDriver firefoxDriver, string quantity, string link, string option)
         {
@@ -114,7 +111,6 @@ namespace Selenium_Project
             SelectOption(ref firefoxDriver, option);
             EnterQuantityAndUrl(ref firefoxDriver, quantity, link);
             BuyAndConfirm(ref firefoxDriver);
-            RepeatBuy(ref firefoxDriver);
 
         }
 
@@ -125,7 +121,6 @@ namespace Selenium_Project
             SelectOption(ref firefoxDriver, option);
             EnterQuantityAndUrl(ref firefoxDriver, quantity, link);
             BuyAndConfirm(ref firefoxDriver);
-            RepeatBuy(ref firefoxDriver);
         }
         private void FollowTikTok(ref FirefoxDriver firefoxDriver, string quantity, string link, string option)
         {
@@ -134,7 +129,6 @@ namespace Selenium_Project
             SelectOption(ref firefoxDriver, option);
             EnterQuantityAndUrl(ref firefoxDriver, quantity, link);
             BuyAndConfirm(ref firefoxDriver);
-            RepeatBuy(ref firefoxDriver);
         }
         private void ViewTikTok(ref FirefoxDriver firefoxDriver, string quantity, string link, string option)
         {
@@ -143,73 +137,84 @@ namespace Selenium_Project
             SelectOption(ref firefoxDriver, option);
             EnterQuantityAndUrl(ref firefoxDriver, quantity, link);
             BuyAndConfirm(ref firefoxDriver);
-            RepeatBuy(ref firefoxDriver);
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            FirefoxDriver firefoxDriver = new FirefoxDriver();
-            Login(ref firefoxDriver);
-            Thread.Sleep(5000);
-            string url = textBoxLink.Text;
-            string quantity = textBoxQuantity.Text;
-            string option = string.Empty;
-            if (likeFaceBook.IsChecked == true)
+            try
             {
-                if (listServices.Text == "Like beta vip độc quyền 6.5 vnđ")
-                    option = "customRadio0";
-                if (listServices.Text == "Like clone siêu sale độc quyền 7 vnđ")
-                    option = "customRadio2";
-                if (listServices.Text == "S3 like clone siêu rẻ 5 vnđ")
-                    option = "customRadio6";
-                LikeFaceBook(ref firefoxDriver, quantity, url, option);
+                string url = textBoxLink.Text;
+                string quantity = textBoxQuantity.Text;
+                if (url == string.Empty || quantity == string.Empty)
+                {
+                    MessageBox.Show("You Need To Enter Link And Quantity Before Start", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
+                FirefoxDriver firefoxDriver = new FirefoxDriver();
+                Login(ref firefoxDriver);
+                Thread.Sleep(5000);
+                string option = string.Empty;
+                if (likeFaceBook.IsChecked == true)
+                {
+                    if (listServices.Text == "Like beta vip độc quyền 6.5 vnđ")
+                        option = "customRadio0";
+                    if (listServices.Text == "Like clone siêu sale độc quyền 7 vnđ")
+                        option = "customRadio2";
+                    if (listServices.Text == "S3 like clone siêu rẻ 5 vnđ")
+                        option = "customRadio6";
+                    LikeFaceBook(ref firefoxDriver, quantity, url, option);
+                }
+                else if (followFacebook.IsChecked == true)
+                {
+                    if (listServices.Text == "Follow clone Việt 21 vnđ")
+                        option = "customRadio0";
+                    if (listServices.Text == "S9 Follow Vip | Sub page 23 vnđ")
+                        option = "customRadio1";
+                    if (listServices.Text == "S8 Follow Clone + Vip độc quyền 22.4 vnđ")
+                        option = "customRadio2";
+                    FollowFaceBook(ref firefoxDriver, quantity, url, option);
+                }
+                else if (tymTikTok.IsChecked == true)
+                {
+                    if (listServices.Text == "Like TikTok việt giá rẻ 14 vnđ")
+                        option = "customRadio0";
+                    if (listServices.Text == "S2 Like tiktok việt high 16 vnđ")
+                        option = "customRadio1";
+                    if (listServices.Text == "S4 like tiktok việt 11 vnđ")
+                        option = "customRadio3";
+                    if (listServices.Text == "S5 Like tiktok Tây Nhanh 7.5 vnđ")
+                        option = "customRadio4";
+                    if (listServices.Text == "S7 Like Tiktok tây 11.5 vnđ")
+                        option = "customRadio5";
+                    if (listServices.Text == "S8 like TikTok tây 5 vnđ")
+                        option = "customRadio6";
+                    TymTikTok(ref firefoxDriver, quantity, url, option);
+                }
+                else if (followTiktok.IsChecked == true)
+                {
+                    if (listServices.Text == "S9 follow tiktok tây 9 vnđ")
+                        option = "customRadio2";
+                    if (listServices.Text == "S10 Follow tiktok tây 14 vnđ")
+                        option = "customRadio3";
+                    if (listServices.Text == "S6 Follow tiktok việt 22 vnđ")
+                        option = "customRadio4";
+                    FollowTikTok(ref firefoxDriver, quantity, url, option);
+                }
+                else if (viewTikTok.IsChecked == true)
+                {
+                    if (listServices.Text == "View Tăng tỉ lệ lên xu hướng [ Trending ] 2 vnđ")
+                        option = "customRadio0";
+                    if (listServices.Text == "View tiktok siêu tốc 0.07 vnđ")
+                        option = "customRadio1";
+                    if (listServices.Text == "S2 view siêu tốc sale 0.06 vnđ")
+                        option = "customRadio2";
+                    if (listServices.Text == "S3 view siêu tốc sale 0.08 vnđ")
+                        option = "customRadio3";
+                    ViewTikTok(ref firefoxDriver, quantity, url, option);
+                }
             }
-            else if (followFacebook.IsChecked == true)
+            catch (Exception ex)
             {
-                if (listServices.Text == "Follow clone Việt 21 vnđ")
-                    option = "customRadio0";
-                if (listServices.Text == "S9 Follow Vip | Sub page 23 vnđ")
-                    option = "customRadio1";
-                if (listServices.Text == "S8 Follow Clone + Vip độc quyền 22.4 vnđ")
-                    option = "customRadio2";
-                FollowFaceBook(ref firefoxDriver, quantity, url, option);
-            }
-            else if (tymTikTok.IsChecked == true)
-            {
-                if (listServices.Text == "Like TikTok việt giá rẻ 14 vnđ")
-                    option = "customRadio0";
-                if (listServices.Text == "S2 Like tiktok việt high 16 vnđ")
-                    option = "customRadio1";
-                if (listServices.Text == "S4 like tiktok việt 11 vnđ")
-                    option = "customRadio3";
-                if (listServices.Text == "S5 Like tiktok Tây Nhanh 7.5 vnđ")
-                    option = "customRadio4";
-                if (listServices.Text == "S7 Like Tiktok tây 11.5 vnđ")
-                    option = "customRadio5";
-                if (listServices.Text == "S8 like TikTok tây 5 vnđ")
-                    option = "customRadio6";
-                TymTikTok(ref firefoxDriver, quantity, url, option);
-            }
-            else if (followTiktok.IsChecked == true)
-            {
-                if (listServices.Text == "S9 follow tiktok tây 9 vnđ")
-                    option = "customRadio2";
-                if (listServices.Text == "S10 Follow tiktok tây 14 vnđ")
-                    option = "customRadio3";
-                if (listServices.Text == "S6 Follow tiktok việt 22 vnđ")
-                    option = "customRadio4";
-                FollowTikTok(ref firefoxDriver, quantity, url, option);
-            }
-            else if (viewTikTok.IsChecked == true)
-            {
-                if (listServices.Text == "View Tăng tỉ lệ lên xu hướng [ Trending ] 2 vnđ")
-                    option = "customRadio0";
-                if (listServices.Text == "View tiktok siêu tốc 0.07 vnđ")
-                    option = "customRadio1";
-                if (listServices.Text == "S2 view siêu tốc sale 0.06 vnđ")
-                    option = "customRadio2";
-                if (listServices.Text == "S3 view siêu tốc sale 0.08 vnđ")
-                    option = "customRadio3";
-                ViewTikTok(ref firefoxDriver, quantity, url, option);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -292,5 +297,19 @@ namespace Selenium_Project
 
         }
 
+        private void likePageFaceBook_Checked(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("This feature is testing");
+            listServices.IsEnabled = true;
+            listServices.Items[0] = "";
+            listServices.Items[1] = "";
+            listServices.Items[2] = "";
+            listServices.Items[3] = string.Empty;
+            listServices.Items[4] = string.Empty;
+            listServices.Items[5] = string.Empty;
+            listServices.Items[6] = string.Empty;
+            listServices.Items[7] = string.Empty;
+            listServices.Items[8] = string.Empty;
+        }
     }
 }
