@@ -113,7 +113,14 @@ namespace Selenium_Project
             BuyAndConfirm(ref firefoxDriver);
 
         }
-
+        private void FollowInstagram(ref FirefoxDriver firefoxDriver, string quantity, string link, string option)
+        {
+            firefoxDriver.Url = "https://dichvu.baostar.pro/instagram-follow";
+            firefoxDriver.Navigate();
+            SelectOption(ref firefoxDriver, option);
+            EnterQuantityAndUrl(ref firefoxDriver, quantity, link);
+            BuyAndConfirm(ref firefoxDriver);
+        }
         private void TymTikTok(ref FirefoxDriver firefoxDriver, string quantity, string link, string option)
         {
             firefoxDriver.Url = "https://dichvu.baostar.pro/tiktok-like";
@@ -243,6 +250,18 @@ namespace Selenium_Project
                         option = "customRadio9";
                     LikeFaceBook(ref firefoxDriver, quantity, url, option);
                 }
+                else if(followInstagram.IsChecked == true)
+                {
+                    if (listServices.Text == "S1 Follower instagram Việt 30 vnđ")
+                        option = "customRadio0";
+                    if (listServices.Text == "S2 Follower tây nhanh [ Tốt ] 36 vnđ")
+                        option = "customRadio1";
+                    if (listServices.Text == "Sv2 Follow việt giá rẻ 15 vnđ")
+                        option = "customRadio2";
+                    if (listServices.Text == "Sv3 Follow việt giá rẻ 18 vnđ")
+                        option = "customRadio3";
+                    FollowInstagram(ref firefoxDriver, quantity, url, option);
+                }
             }
             catch (Exception ex)
             {
@@ -354,6 +373,20 @@ namespace Selenium_Project
             listServices.Items[4] = "S1 Like clone Sale 6.5 vnđ";
             listServices.Items[5] = "S1 Like cảm xúc 6.5 vnđ";
             listServices.Items[6] = "S3 Like cảm xúc 11 vnđ";
+            listServices.Items[7] = string.Empty;
+            listServices.Items[8] = string.Empty;
+        }
+
+        private void followInstagram_Checked(object sender, RoutedEventArgs e)
+        {
+            listServices.IsEnabled = true;
+            listServices.Items[0] = "S1 Follower instagram Việt 30 vnđ";
+            listServices.Items[1] = "S2 Follower tây nhanh [ Tốt ] 36 vnđ";
+            listServices.Items[2] = "Sv2 Follow việt giá rẻ 15 vnđ";
+            listServices.Items[3] = "Sv3 Follow việt giá rẻ 18 vnđ";
+            listServices.Items[4] = string.Empty;
+            listServices.Items[5] = string.Empty;
+            listServices.Items[6] = string.Empty;
             listServices.Items[7] = string.Empty;
             listServices.Items[8] = string.Empty;
         }

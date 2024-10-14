@@ -46,6 +46,7 @@
         <Label Content="Services" HorizontalAlignment="Left" Margin="258,301,0,0" VerticalAlignment="Top" Background="#FFE6D9D9"/>
         <RadioButton x:Name="likePageFaceBook" Content="Like Page Face Book" HorizontalAlignment="Left" Margin="314,125,0,0" VerticalAlignment="Top" ClickMode="Press" IsChecked="False" Checked="likePageFaceBook_Checked"/>
         <RadioButton x:Name="likeFaceBook" Content="Like FaceBook" HorizontalAlignment="Left" Margin="314,106,0,0" VerticalAlignment="Top" Checked="likeFaceBook_Checked"/>
+        <RadioButton x:Name="followInstagram" Content="Follow Instagram" HorizontalAlignment="Left" Margin="314,86,0,0" VerticalAlignment="Top" Checked="followInstagram_Checked"/>
     </Grid>
 
 </Window>
