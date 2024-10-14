@@ -13,7 +13,7 @@
         </Grid.Background>
         <TextBox x:Name="textBoxLink" HorizontalAlignment="Left" Margin="305,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422"/>
         <TextBox x:Name="textBoxQuantity" HorizontalAlignment="Left" Margin="314,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <RadioButton x:Name="likeFaceBook" Content="Like FaceBook" HorizontalAlignment="Left" Margin="314,165,0,0" VerticalAlignment="Top" Checked="likeFaceBook_Checked"/>
+        <RadioButton x:Name="likeFaceBookSale" Content="Like FaceBook Sale" HorizontalAlignment="Left" Margin="314,165,0,0" VerticalAlignment="Top" Checked="likeFaceBookSale_Checked"/>
         <RadioButton x:Name="followFacebook" Content="Follow FaceBook" HorizontalAlignment="Left" Margin="314,185,0,0" VerticalAlignment="Top" Checked="followFacebook_Checked"/>
         <RadioButton x:Name="tymTikTok" Content="Tym TikTok" HorizontalAlignment="Left" Margin="314,205,0,0" VerticalAlignment="Top" Checked="tymTikTok_Checked"/>
         <RadioButton x:Name="followTiktok" Content="Follow TikTok" HorizontalAlignment="Left" Margin="314,225,0,0" VerticalAlignment="Top" ClickMode="Press" IsChecked="False" Checked="followTiktok_Checked"/>
@@ -45,6 +45,7 @@
         </Label>
         <Label Content="Services" HorizontalAlignment="Left" Margin="258,301,0,0" VerticalAlignment="Top" Background="#FFE6D9D9"/>
         <RadioButton x:Name="likePageFaceBook" Content="Like Page Face Book" HorizontalAlignment="Left" Margin="314,125,0,0" VerticalAlignment="Top" ClickMode="Press" IsChecked="False" Checked="likePageFaceBook_Checked"/>
+        <RadioButton x:Name="likeFaceBook" Content="Like FaceBook" HorizontalAlignment="Left" Margin="314,106,0,0" VerticalAlignment="Top" Checked="likeFaceBook_Checked"/>
     </Grid>
 
 </Window>

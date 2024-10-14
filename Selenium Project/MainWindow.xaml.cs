@@ -88,7 +88,7 @@ namespace Selenium_Project
             quantityLike.SendKeys(quantity.ToString());
             Thread.Sleep(2000);
         }
-        private void LikeFaceBook(ref FirefoxDriver firefoxDriver, string quantity, string link, string option)
+        private void LikeFaceBookSale(ref FirefoxDriver firefoxDriver, string quantity, string link, string option)
         {
             firefoxDriver.Url = "https://dichvu.baostar.pro/facebook-like-gia-re";
             firefoxDriver.Navigate();
@@ -138,6 +138,22 @@ namespace Selenium_Project
             EnterQuantityAndUrl(ref firefoxDriver, quantity, link);
             BuyAndConfirm(ref firefoxDriver);
         }
+        private void LikeFaceBook(ref FirefoxDriver firefoxDriver, string quantity, string link, string option)
+        {
+            firefoxDriver.Url = "https://dichvu.baostar.pro/facebook-like-chat-luong";
+            firefoxDriver.Navigate();
+            SelectOption(ref firefoxDriver, option);
+            EnterQuantityAndUrl(ref firefoxDriver, quantity, link);
+            try
+            {
+                var likeButton = firefoxDriver.FindElement(By.XPath("//img[@data-type='like']"));
+                likeButton.Click();
+                var tymButton = firefoxDriver.FindElement(By.XPath("//img[@data-type='love']"));
+                tymButton.Click();
+            }
+            catch { }
+            BuyAndConfirm(ref firefoxDriver);
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -153,7 +169,7 @@ namespace Selenium_Project
                 Login(ref firefoxDriver);
                 Thread.Sleep(5000);
                 string option = string.Empty;
-                if (likeFaceBook.IsChecked == true)
+                if (likeFaceBookSale.IsChecked == true)  // like sale
                 {
                     if (listServices.Text == "Like beta vip độc quyền 6.5 vnđ")
                         option = "customRadio0";
@@ -161,7 +177,7 @@ namespace Selenium_Project
                         option = "customRadio2";
                     if (listServices.Text == "S3 like clone siêu rẻ 5 vnđ")
                         option = "customRadio6";
-                    LikeFaceBook(ref firefoxDriver, quantity, url, option);
+                    LikeFaceBookSale(ref firefoxDriver, quantity, url, option);
                 }
                 else if (followFacebook.IsChecked == true)
                 {
@@ -211,6 +227,22 @@ namespace Selenium_Project
                         option = "customRadio3";
                     ViewTikTok(ref firefoxDriver, quantity, url, option);
                 }
+                else if (likeFaceBook.IsChecked == true)
+                {
+                    if (listServices.Text == "S2 Like clone nhanh 11 vnđ")
+                        option = "customRadio3";
+                    if (listServices.Text == "S2 Like post dự phòng 12 vnđ")
+                        option = "customRadio4";
+                    if (listServices.Text == "S2 Like siêu nhanh 20 vnđ")
+                        option = "customRadio5";
+                    if (listServices.Text == "S1 Like clone Sale 6.5 vnđ")
+                        option = "customRadio7";
+                    if (listServices.Text == "S1 Like cảm xúc 6.5 vnđ")
+                        option = "customRadio8";
+                    if (listServices.Text == "S3 Like cảm xúc 11 vnđ")
+                        option = "customRadio9";
+                    LikeFaceBook(ref firefoxDriver, quantity, url, option);
+                }
             }
             catch (Exception ex)
             {
@@ -218,7 +250,7 @@ namespace Selenium_Project
             }
         }
 
-        private void likeFaceBook_Checked(object sender, RoutedEventArgs e)
+        private void likeFaceBookSale_Checked(object sender, RoutedEventArgs e)
         {
             listServices.IsEnabled = true;
             listServices.Items[0] = "Like beta vip độc quyền 6.5 vnđ";
@@ -308,6 +340,20 @@ namespace Selenium_Project
             listServices.Items[4] = string.Empty;
             listServices.Items[5] = string.Empty;
             listServices.Items[6] = string.Empty;
+            listServices.Items[7] = string.Empty;
+            listServices.Items[8] = string.Empty;
+        }
+
+        private void likeFaceBook_Checked(object sender, RoutedEventArgs e)
+        {
+            listServices.IsEnabled = true;
+            listServices.Items[0] = "S2 Like clone nhanh 11 vnđ";
+            listServices.Items[1] = "S2 Like post dự phòng 12 vnđ";
+            listServices.Items[2] = "S6 Follow tiktok việt 22 vnđ";
+            listServices.Items[3] = "S2 Like siêu nhanh 20 vnđ";
+            listServices.Items[4] = "S1 Like clone Sale 6.5 vnđ";
+            listServices.Items[5] = "S1 Like cảm xúc 6.5 vnđ";
+            listServices.Items[6] = "S3 Like cảm xúc 11 vnđ";
             listServices.Items[7] = string.Empty;
             listServices.Items[8] = string.Empty;
         }
